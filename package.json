@@ -1,0 +1,23 @@
+{
+  "name": "hw1",
+  "version": "1.0.0",
+  "description": "CS 233W Homework 1",
+  "homepage": "https://github.com/riverb-creative/CS233WHW#readme",
+  "bugs": {
+    "url": "https://github.com/riverb-creative/CS233WHW/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/riverb-creative/CS233WHW.git"
+  },
+  "license": "ISC",
+  "author": "River Breazile",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
