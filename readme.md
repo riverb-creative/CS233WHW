@@ -11,10 +11,11 @@ How To Install Dependencies:
     - npm install express
 
 [!IMPORTANT]
-    Instructions to run server with URLs to test routes:
-    1. Create clone of HW1 repository from GitHub
-    2. Initialize node.js with _npm init_
-    3. Install Express with _npm install express_
-    4. To run the server and test it type _run node server.js_ or _npm start_
-    5. Open your browser and type _http://localhost:3000_ into the URL to get to the root route
-    6. Type _http://localhost:3000/about_ into the URL to get to the about route
+
+Instructions to run server with URLs to test routes:
+1. Create clone of HW1 repository from GitHub
+2. Initialize node.js with _npm init_
+3. Install Express with _npm install express_
+4. To run the server and test it type _run node server.js_ or _npm start_
+5. Open your browser and type _http://localhost:3000_ into the URL to get to the root route
+6. Type _http://localhost:3000/about_ into the URL to get to the about route
