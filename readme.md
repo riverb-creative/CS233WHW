@@ -1,4 +1,4 @@
-# CS 233W - Homework 01
+# CS 233W - Homework 02
 ## Author: River
 ### Date: 10/15/2025
 
