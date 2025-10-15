@@ -22,7 +22,8 @@ Instructions to run server with URLs to test routes:
 7. To check if an (number) ID exists type _http://localhost:3000/lists/_ and add _theIDNumberYouWantToCheck_ into the URL after _lists/_ to get to view the array
 8. To search for a section and get a list of items available type _http://localhost:3000/lists/search/mysearch_ into the URL and add _?section=theSectionYouWantToSearch_ after _mysearch_ to get to view the array
 9. To check if you can add an item via the POST method open http://localhost:3000/lists right click and click Inspect. Navigate to the console section of the inspect tool and copy and paste a working POST request:
-    fetch('http://localhost:3000/list', {
+
+    fetch('http://localhost:3000/lists/add/item', {
      method: 'POST',
      headers: { 'Content-Type': 'application/json' },
      body: JSON.stringify({
@@ -35,7 +36,8 @@ Instructions to run server with URLs to test routes:
     .then(data => console.log(data))
     .catch(err => console.error(err));
 10. To check a non-working POST request copy and paste in the console:
-    fetch('http://localhost:3000/list', {
+
+    fetch('http://localhost:3000/lists/add/item', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
