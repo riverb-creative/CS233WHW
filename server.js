@@ -15,8 +15,16 @@
     const express = require('express');
     const app = express();
 
+//allow this server to take advantage of the JSON middleware
+    app.use(express.json());
+
+    const listRoutes = require('./routes/lists');
+
 // set listening port value
     const PORT = 3000;
+
+//mount each of the routing files, associating it with its starter path
+    app.use('/lists', listRoutes);
 
 //create object of date
     const dateAndTime = new Date();
@@ -38,4 +46,4 @@
 
     app.listen(PORT, () => {
         console.log("Server started; running at http:localhost:" + PORT);
-    })
+    });
