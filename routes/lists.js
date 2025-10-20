@@ -50,9 +50,9 @@ router.get("/search/mysearch", (req, res) => {
         for( let i = 0; i< myCategory.length; i++) {
             theListItem += "<li>" + myCategory[i].itemName + "</li>"
      }  
-        theListItem += "</ul";
+        theListItem += "</ul>";
      
-      res.send("<h1>Shoping List Category: " + theSection + "</h1><h2>" + theListItem + "</h2>");  
+      res.send("<h1>Shopping List Category: " + theSection + "</h1><h2>" + theListItem + "</h2>");  
     }
     else {
         res.status(404)
