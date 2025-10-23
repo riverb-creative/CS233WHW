@@ -6,7 +6,7 @@
  * 
  * CS 233W
  * 
- * Oct. 8th 2025
+ * Oct. 22nd 2025
  */
 
 
@@ -14,9 +14,11 @@
 
     const express = require('express');
     const app = express();
+    const logger = require('./middleware/logger');
 
 //allow this server to take advantage of the JSON middleware
     app.use(express.json());
+    app.use(logger);
 
     const listRoutes = require('./routes/lists');
 
@@ -40,7 +42,15 @@
 
     app.get('/about', (request, response) => {
         response.send("<ul><li>App Name: Such Fancy Shopping List</li></li><li>Name: River</li><li>Term: FALL 2025</li></ul>");
-    })
+    });
+
+    //using theError middleware to check if an error has occurred when entering information
+    app.use((theError, request, response, next) => {
+            console.error("[ERROR] " + theError.message);
+            const theStatus = theError.status || 500;
+            response.status(theStatus).json({ issue: "There's a problem " + theError.message });
+
+    });
 
 //starting the server
 

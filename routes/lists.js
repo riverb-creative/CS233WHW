@@ -10,6 +10,7 @@
 const express = require('express');
 const router = express.Router();
 const myListItems = require('../data/data');
+const cleanData = require('../middleware/sanitize');
 
 router.get('/', (req, res) => {
     res.json(myListItems);
@@ -60,7 +61,7 @@ router.get("/search/mysearch", (req, res) => {
     }
 });
 
-router.post("/add/item", (req, res) => {
+router.post("/add/item", cleanData, (req, res) => {
 
     //it would more efficient to use the spread operator of object/array to create a copy of all
     //of the properties in the incoming data all at once
