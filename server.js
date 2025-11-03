@@ -15,40 +15,36 @@
     const express = require('express');
     const app = express();
     const logger = require('./middleware/logger');
+    const data = require('./data/data');
 
 //allow this server to take advantage of the JSON middleware
     app.use(express.json());
+    app.use(express.static("public"));
     app.use(logger);
 
+    const homepage = require('./routes/index');
+    const shoppingList = require('./routes/shoppingList');
+    const singleItem = require('./routes/singleItem');
     const listRoutes = require('./routes/lists');
+    const aboutDeveloper = require('./routes/about');
 
 // set listening port value
     const PORT = 3000;
+    app.set("view engine", "ejs");
+    app.set("views", "./views");
 
 //mount each of the routing files, associating it with its starter path
+    app.use('/', homepage);
+    app.use('/shoppingList', shoppingList);
+    app.use('/singleItem', singleItem);
     app.use('/lists', listRoutes);
+    app.use('/about', aboutDeveloper);
 
-//create object of date
-    const dateAndTime = new Date();
-
-//format object of date into readable string
-    const getDateTime = dateAndTime.toLocaleString();
-
-//configuring the routes
-
-    app.get('/', (request, response) => {
-        response.send(`<h1>Such Fancy Shopping List</h1><h2>Current Date and Time:</h2><em>${getDateTime}</em>`);
-    })
-
-    app.get('/about', (request, response) => {
-        response.send("<ul><li>App Name: Such Fancy Shopping List</li></li><li>Name: River</li><li>Term: FALL 2025</li></ul>");
-    });
-
-    //using theError middleware to check if an error has occurred when entering information
-    app.use((theError, request, response, next) => {
+//using theError middleware to check if an error has occurred when entering information
+    app.use((theError, req, res, next) => {
             console.error("[ERROR] " + theError.message);
             const theStatus = theError.status || 500;
-            response.status(theStatus).json({ issue: "There's a problem " + theError.message });
+            res.status(theStatus).json({ issue: "There's a problem " + theError.message });
 
     });
 
