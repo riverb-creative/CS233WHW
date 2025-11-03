@@ -1,8 +1,8 @@
-# CS 233W - Homework 03
+# CS 233W - Homework 04
 ## Author: River
-### Date: 10/24/2025
+### Date: 11/03/2025
 
-**Description:** CS 233W Homework 03 - Creating a shopping list application using the express. Creating middleware and importing sanitize-html to discard script tags
+**Description:** CS 233W Homework 04 - Creating a shopping list application using ejs to display single item or the entire shopping list. Using partials for repeating code that is all the same in the ejs files
 
 Dependencies: 
     - express.js
