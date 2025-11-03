@@ -1,3 +1,11 @@
+/**
+ * shoppingList.js
+ * 
+ * sends information of entire shopping list to the list.ejs file
+ * http://localhost:3000/shoppingList
+ * 
+ */
+
 //import or require all of the desired frameworks/libraries/resources
 const express = require('express');
 const router = express.Router();

@@ -1,7 +1,7 @@
 /**
- * singleItem.js
+ * shoppingList.js
  * 
- * all of the route definitions for catalog-related paths
+ * sends information of single shopping item to the item.ejs file
  * http://localhost:3000/singleItem
  * 
  */
@@ -15,7 +15,7 @@ router.get("/:id", (req, res) => {
    //get the specific employee ID from the url
    const theItemID = req.params.id;
    
-   //create JavaScript to query the employeeList collection
+   //create JavaScript to query the myListItems collection
    //retrieve the object just for this particular employee
    const theItem = myListItems.find((item) => item.id === Number(theItemID));
 
