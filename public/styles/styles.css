@@ -1,0 +1,47 @@
+/* style for body of page */
+
+    body {
+        font-family:'Courier New', Courier, monospace;
+        background-color: rgba(238, 228, 214, 0.846);
+    }
+
+/* style for image logo */
+
+    img {
+        width: 5%;
+        height: auto;
+        margin-top: 1em;
+    }
+
+/* style for header, footer, div, application description and link to entire shopping list*/
+
+    header, footer, div, .appDesc, .listLink {
+        text-align: center;
+    }
+
+/* styles for table on shoppingList page */
+
+    table {
+        border-collapse: collapse;
+        margin: 3em;
+    }
+
+    td, th {
+        border: 1px solid black;
+        text-align: center;
+        padding: 1em;
+    }
+    .canineSection {
+        font-weight: bold;
+        white-space: nowrap;
+    }
+
+    .felineSection {
+        font-weight: bold;
+        white-space: nowrap;
+    }
+
+    .rodentSection {
+        font-weight: bold;
+        white-space: nowrap;
+    }
