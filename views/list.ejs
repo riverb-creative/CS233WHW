@@ -1,0 +1,45 @@
+<%- include('./partials/header') %>
+        <table> 
+            <thead>
+                <tr>
+                    <th>Item ID</th>
+                    <th>Item Name</th>
+                    <th>Section</th>
+                    <th>Description</th>
+                </tr>
+            </thead> 
+            <!-- forEach loop starts here -->
+            <% listItems.forEach((item) => { %>
+            <tbody>
+            <tr>
+                <td>
+                    <!-- item ID goes here -->
+                    <%= item.id %>
+                </td>
+                <td>
+                    <!-- item name goes here -->
+                    <%= item.itemName %>
+                </td>
+                <td>
+                    <!-- item section goes here -->
+                    <% if(item.section === 'canine') { %>
+                        <!-- if section is canine-->
+                        <div class="canineSection">&#128054; <%= item.section %> &#128054;</div>
+                    <% } else if (item.section === 'feline') { %>
+                        <!-- else if section is feline-->
+                            <div class="felineSection">&#128049; <%= item.section %> &#128049;</div>
+                    <% } else { %>
+                        <!-- else section is rodent -->
+                            <div class="rodentSection">&#128045; <%= item.section %> &#128045; </div>
+                    <% } %>
+                </td>
+                <td>
+                    <!-- desc goes here -->
+                     <%= item.desc %>
+                </td>
+            </tr>
+        </tbody>
+            <!-- forEach loop ends here -->
+             <% }) %>
+        </table>
+        <%- include('partials/footer') %>

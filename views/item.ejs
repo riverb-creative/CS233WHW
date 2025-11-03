@@ -1,0 +1,18 @@
+<%- include('./partials/header') %>
+    
+        <div>
+            <% if(item.coupon) { %>
+                <p><strong>Item ID:</strong> <%= item.id %></p>
+                <p><strong>Item Name:</strong> <%= item.itemName %></p>
+                <p><strong>Category:</strong> <%= item.section %></p>
+                <p><strong>Description:</strong> <%= item.desc %></p>
+                <p class="couponIcon">&#9984;</p>
+           <% } else { %>
+                <p><strong>Item ID:</strong> <%= item.id %></p>
+                <p><strong>Item Name:</strong> <%= item.itemName %></p>
+                <p><strong>Category:</strong> <%= item.section %></p>
+                <p>Description: <%= item.desc %></p>
+           <% } %>
+        </div>
+
+        <%- include('partials/footer') %>
