@@ -2,7 +2,7 @@
  * lists.js
  * 
  * all of the route definitions for catalog-related paths
- * http://localhost:2500/lists
+ * http://localhost:3000/lists
  * 
  */
 
