@@ -9,37 +9,44 @@ const listItems = [
     {   id: 1, 
         itemName: 'Dog flower dress', 
         section: 'canine',
-        desc: 'Cute white dress with sunflowers to make your dog the stylish one on the block!' 
+        desc: 'Cute white dress with sunflowers to make your dog the stylish one on the block!' ,
+        coupon: true
     },
     {   id: 2, 
         itemName: 'Soft cat tuna treats', 
         section: 'feline', 
-        desc: 'It is true when they say cats love tuna so buy them these soft cat treats!' 
+        desc: 'It is true when they say cats love tuna so buy them these soft cat treats!', 
+        coupon: true
     },
     {   id: 3, 
         itemName: 'Small blue and yellow tennis ball', 
         section: 'canine', 
-        desc: 'Bouncy ball tp throw for your furry friend'
+        desc: 'Bouncy ball to throw for your furry friend!',
+        coupon: false
     },
     {   id: 4, 
         itemName: 'Small non-skid dog socks', 
         section: 'canine', 
-        desc: 'Small non-skid dog socks to help your older friend stay on their paws!' 
+        desc: 'Small non-skid dog socks to help your older friend stay on their paws!',
+        coupon: false
     },
     {   id: 5, 
         itemName: 'Extra small running wheel', 
         section: 'rodent', 
-        desc: 'Running wheel to help your tiny friend run out their energy.'
+        desc: 'Running wheel to help your tiny friend run out their energy.',
+        coupon: true
     },
     {   id: 6, 
         itemName: 'Very yummy catnip', 
         section: 'feline', 
-        desc: 'Prestine organic catnip for a furry friend who needs to relax.' 
+        desc: 'Prestine organic catnip for a furry friend who needs to relax.',
+        coupon: false
     },
     {   id: 7, 
         itemName: 'Tiny animal bathing sand', 
         section: 'rodent', 
-        desc: '6 oz of bathing sand for your little friend who likes to burrow.' 
+        desc: '6 oz of bathing sand for your little friend who likes to burrow.',
+        coupon: false
     }
 ];
 
