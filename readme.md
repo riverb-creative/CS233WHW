@@ -18,40 +18,23 @@ How To Install Dependencies:
 
 > [!IMPORTANT]
 > Instructions to run server with URLs to test routes:
-
 > 1. Create clone of HW1 repository from GitHub
-
 > 2. Initialize node.js with _npm init_
-
 > 3. Install dependencies in node_modules folder with _npm install_
-
 > 4. Install Express with _npm install express_
-
 > 5. Install sanitize html with _npm install sanitize-html_
-
 > 6. Install ejs with _npm install ejs_
-
 > 7. Install ejs with _npm install express-validator_
-
 > 8. To run the server and test it type _run node server.js_ or _npm start_
-
 > 9. Open your browser and type _http://localhost:3000_ into the URL to get to the root route
-
 > 10. Click _View Entire Shopping List_ to be taken to the shopping list
-
 > 11. Once done viewing any of the pages you can click the heart to go back to the homepage
-
 > 12. To view a single item in the URL type _http://localhost:300/singleItem/theIDYouWantToSearch_
-
 > - ID's available: 1, 2, 3, 4, 5, 6, and 7
-
 > 13. To view GitHub Repository click _GitHub Repository for this application_ to be taken to this GitHub Repository for this application
-
 > 14. Click _Add Shopping List Item_ to view the form to add a list item
-
    > - If no errors are found you will be redirected to the entire shopping list page
    > - If errors are found you will view an errors page that will show  _Please Try Again_ link that will take you back to the form with the errors
-
 > 15. Click _Delete Shopping List Item_ to view the form to add a list item
    > - If no errors are found you will be redirected to the entire shopping list page
    > - If errors are found you will view an errors page that will show  _Please Try Again_ link that will take you back to the form with the errors
