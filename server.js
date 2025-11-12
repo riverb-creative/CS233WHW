@@ -1,54 +1,53 @@
 /**
- * CS 233W Homework 1 - Creating Shopping List Application
- * using only the express.js web framework
+ * CS 233W Homework 5  - Creating forms with express-validtor and express.urlencoded
  * 
  * River Breazile 
  * 
  * CS 233W
  * 
- * Oct. 22nd 2025
+ * November 10th 2025
  */
 
 
 // import desired framework
-
     const express = require('express');
     const app = express();
     const logger = require('./middleware/logger');
 
 //allow this server to take advantage of the JSON middleware
     app.use(express.json());
+    app.use(express.static("public"));
     app.use(logger);
+    app.use(express.urlencoded({extended: true }));
 
+    const homepage = require('./routes/index');
+    const shoppingList = require('./routes/shoppingList');
+    const singleItem = require('./routes/singleItem');
     const listRoutes = require('./routes/lists');
+    const aboutDeveloper = require('./routes/about');
+    const addListItem = require('./routes/addListItem');
+   
+    const deleteListItem = require('./routes/deleteListItems');
 
 // set listening port value
     const PORT = 3000;
+    app.set("view engine", "ejs");
+    app.set("views", "./views");
 
 //mount each of the routing files, associating it with its starter path
+    app.use('/', homepage);
+    app.use('/shoppingList', shoppingList);
+    app.use('/singleItem', singleItem);
     app.use('/lists', listRoutes);
+    app.use('/about', aboutDeveloper);
+    app.use('/addListItem', addListItem);
+    app.use('/deleteListItem', deleteListItem);
 
-//create object of date
-    const dateAndTime = new Date();
-
-//format object of date into readable string
-    const getDateTime = dateAndTime.toLocaleString();
-
-//configuring the routes
-
-    app.get('/', (request, response) => {
-        response.send(`<h1>Such Fancy Shopping List</h1><h2>Current Date and Time:</h2><em>${getDateTime}</em>`);
-    })
-
-    app.get('/about', (request, response) => {
-        response.send("<ul><li>App Name: Such Fancy Shopping List</li></li><li>Name: River</li><li>Term: FALL 2025</li></ul>");
-    });
-
-    //using theError middleware to check if an error has occurred when entering information
-    app.use((theError, request, response, next) => {
+//using theError middleware to check if an error has occurred when entering information
+    app.use((theError, req, res, next) => {
             console.error("[ERROR] " + theError.message);
             const theStatus = theError.status || 500;
-            response.status(theStatus).json({ issue: "There's a problem " + theError.message });
+            res.status(theStatus).json({ issue: "There's a problem " + theError.message });
 
     });
 
