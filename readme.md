@@ -17,7 +17,6 @@ How To Install Dependencies:
     - npm install express-validator
 
 > [!IMPORTANT]
-
 > Instructions to run server with URLs to test routes:
 
 > 1. Create clone of HW1 repository from GitHub
