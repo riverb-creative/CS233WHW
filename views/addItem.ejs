@@ -1,0 +1,30 @@
+<%- include('./partials/header') %>
+
+    <form action="/addListItem" method="post">
+        <label for="itemName">Item Name:</label>
+        <br><br>
+            <input type="text" id="itemName" name="itemName" placeholder="Enter Item Name">
+        <br><br>
+        <label for="section">Choose a Category:</label>
+        <br><br>
+            <select name="itemSection" id="ItemSection">
+                <option value="canine">Canine</option>
+                <option value="feline">Feline</option>
+                <option value="rodent">Rodent</option>
+            </select>
+        <br><br>
+        <label for="itemDesc">Item Description:</label>
+        <br><br>
+            <input type="text" id="itemDesc" name="itemDesc" placeholder="Enter Item Description">
+        <br><br>
+        <label for="coupon">Coupon Available?:</label>
+        <br><br>
+            <select name="itemCoupon" id="coupon">
+                <option value="noCoupon">no</option>
+                <option value="yesCoupon">yes</option>
+            </select>
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <%- include('partials/footer') %>

@@ -1,0 +1,20 @@
+<%- include('./partials/header') %>
+
+    <form action="/deleteListItem" method="post">
+        <label for="itemOptions">Choose item to delete:</label>
+          
+        <select name="itemOptions" id="itemOptions">
+          <!-- forEach loop starts here -->
+          <% listItems.forEach((item) => { %>
+            <option id="item">
+                <!-- itemName goes here -->
+                 <%= item.itemName %>
+            </option>
+            <!-- forEach loop ends here -->
+          <% }) %>
+        </select>
+        
+  <br>
+  <input type="submit" value="Submit">
+</form>
+    <%- include('partials/footer') %>
