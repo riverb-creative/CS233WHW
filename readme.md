@@ -1,12 +1,6 @@
-<<<<<<< HEAD
 # CS 233W - Homework 05
 ## Author: River
 ### Date: 11/10/2025
-=======
-# CS 233W - Homework 04
-## Author: River
-### Date: 11/03/2025
->>>>>>> 55271e1c903b7b89bb9dac989796e81afa96ccde
 
 **Description:** CS 233W Homework 04 - Creating a shopping list application using ejs to display single item or the entire shopping list. Using partials for repeating code that is all the same in the ejs files
 
@@ -14,19 +8,13 @@ Dependencies:
     - express.js
     - sanitize-html
     - ejs
-<<<<<<< HEAD
     - express-validator
-=======
->>>>>>> 55271e1c903b7b89bb9dac989796e81afa96ccde
 
 How To Install Dependencies:
     - npm install express
     - npm install sanitize-html
     - npm install ejs
-<<<<<<< HEAD
     - npm install express-validator
-=======
->>>>>>> 55271e1c903b7b89bb9dac989796e81afa96ccde
 
 > [!IMPORTANT]
 
@@ -44,7 +32,6 @@ How To Install Dependencies:
 
 6. Install ejs with _npm install ejs_
 
-<<<<<<< HEAD
 7. Install ejs with _npm install express-validator_
 
 8. To run the server and test it type _run node server.js_ or _npm start_
@@ -91,18 +78,3 @@ How To Install Dependencies:
    > - Click the _Submit_ button
    > - Click _Please Try Again_ link to be taken back to the form to fix the errors
     
-=======
-7. To run the server and test it type _run node server.js_ or _npm start_
-
-8. Open your browser and type _http://localhost:3000_ into the URL to get to the root route
-
-9. Click _View Entire Shopping List_ to be taken to the shopping list
-
-10. Once done viewing the Entire Shopping List you can click the heart to go back to the homepage
-
-11. To view a single item in the URL type _http://localhost:300/singleItem/theIDYouWantToSearch_
-
-    - ID's available: 1, 2, 3, 4, 5, 6, and 7
-
-12. To view GitHub Repository click _GitHub Repository for this application_ to be taken to this GitHub Repository for this application
->>>>>>> 55271e1c903b7b89bb9dac989796e81afa96ccde

@@ -5,11 +5,7 @@
  * 
  * CS 233W
  * 
-<<<<<<< HEAD
  * November 10th 2025
-=======
- * November 3rd 2025
->>>>>>> 55271e1c903b7b89bb9dac989796e81afa96ccde
  */
 
 
@@ -30,12 +26,9 @@
     const singleItem = require('./routes/singleItem');
     const listRoutes = require('./routes/lists');
     const aboutDeveloper = require('./routes/about');
-<<<<<<< HEAD
     const addListItem = require('./routes/addListItem');
    
     const deleteListItem = require('./routes/deleteListItems');
-=======
->>>>>>> 55271e1c903b7b89bb9dac989796e81afa96ccde
 
 // set listening port value
     const PORT = 3000;
@@ -48,11 +41,8 @@
     app.use('/singleItem', singleItem);
     app.use('/lists', listRoutes);
     app.use('/about', aboutDeveloper);
-<<<<<<< HEAD
     app.use('/addListItem', addListItem);
     app.use('/deleteListItem', deleteListItem);
-=======
->>>>>>> 55271e1c903b7b89bb9dac989796e81afa96ccde
 
 //using theError middleware to check if an error has occurred when entering information
     app.use((theError, req, res, next) => {

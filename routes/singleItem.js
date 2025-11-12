@@ -15,11 +15,7 @@ router.get("/:id", (req, res) => {
    //get the specific employee ID from the url
    const theItemID = req.params.id;
    
-<<<<<<< HEAD
    //create JavaScript to query the listItems collection
-=======
-   //create JavaScript to query the myListItems collection
->>>>>>> 55271e1c903b7b89bb9dac989796e81afa96ccde
    //retrieve the object just for this particular employee
    const theItem = listItems.find((item) => item.id === Number(theItemID));
 
