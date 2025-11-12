@@ -17,11 +17,6 @@ const router = express.Router();
     const getDateTime = dateAndTime.toLocaleString();
 
 //configuring the routes
-
-    /*router.get('/', (request, response) => {
-        response.send(`<h1>Such Fancy Shopping List</h1><h2>Current Date and Time:</h2><em>${getDateTime}</em>`);
-    });*/
-
     router.get('/', (req, res) => {
         res.render('index', {title: "Shopping App Homepage", appName: "Such a Fun Shopping App", getDateTime});
     });

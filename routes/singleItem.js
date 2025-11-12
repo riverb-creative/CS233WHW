@@ -1,7 +1,7 @@
 /**
- * singleItem.js
+ * shoppingList.js
  * 
- * all of the route definitions for catalog-related paths
+ * sends information of single shopping item to the item.ejs file
  * http://localhost:3000/singleItem
  * 
  */
@@ -9,15 +9,15 @@
 //import or require all of the desired frameworks/libraries/resources
 const express = require('express');
 const router = express.Router();
-const myListItems = require('../data/data');
+const listItems = require('../data/data');
 
 router.get("/:id", (req, res) => {
    //get the specific employee ID from the url
    const theItemID = req.params.id;
    
-   //create JavaScript to query the employeeList collection
+   //create JavaScript to query the listItems collection
    //retrieve the object just for this particular employee
-   const theItem = myListItems.find((item) => item.id === Number(theItemID));
+   const theItem = listItems.find((item) => item.id === Number(theItemID));
 
    //response.render that requested a template for a single employee page
    //pass the object for the current employee to that template

@@ -9,11 +9,11 @@
 //import or require all of the desired frameworks/libraries/resources
 const express = require('express');
 const router = express.Router();
-const myListItems = require('../data/data');
+const listItems = require('../data/data');
 const cleanData = require('../middleware/sanitize');
 
 router.get('/', (req, res) => {
-    res.json(myListItems);
+    res.json(listItems);
 });
 
 //route that showcases using external data from the ../../data/categories.js file
@@ -23,7 +23,7 @@ router.get("/:id", (req, res) => {
 
     //use that value to search through the data array and
     //return the object that contain an id that matches what's in listId 
-    const myData = myListItems.find(data => data.id === Number(listId));
+    const myData = listItems.find(data => data.id === Number(listId));
 
     //if myData has successfully found a match it will 
     //exist and will be a single data object         
@@ -43,7 +43,7 @@ router.get("/search/mysearch", (req, res) => {
     //retrieve any query string data
     let theSection = req.query.section;
     
-    const myCategory = myListItems.filter(data => data.section === String(theSection));
+    const myCategory = listItems.filter(data => data.section === String(theSection));
 
     //test to see if it exists
     if(theSection) {
@@ -66,14 +66,14 @@ router.post("/add/item", cleanData, (req, res) => {
     //it would more efficient to use the spread operator of object/array to create a copy of all
     //of the properties in the incoming data all at once
     const newItem = {
-        id: myListItems.length + 1,
+        id: listItems.length + 1,
         ...req.body
     }
 
     if(newItem.itemName && newItem.section) {
         
       //push that object into the end of the array of categories  
-            myListItems.push(newItem);
+            listItems.push(newItem);
 
         //send some sort of success response
             res.status(201)
