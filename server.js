@@ -15,6 +15,10 @@
     const logger = require('./middleware/logger');
     const data = require('./data/data');
 
+//database requirements 
+    require('./config/db');
+    const Item = require('./models/Item');
+
 //allow this server to take advantage of the JSON middleware
     app.use(express.json());
     app.use(express.static("public"));

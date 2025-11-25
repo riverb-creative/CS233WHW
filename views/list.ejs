@@ -6,10 +6,11 @@
                     <th>Item Name</th>
                     <th>Section</th>
                     <th>Description</th>
+                    <th>Coupon Available?</th>
                 </tr>
             </thead> 
             <!-- forEach loop starts here -->
-            <% listItems.forEach((item) => { %>
+            <% myItem.forEach((item) => { %>
             <tbody>
             <tr>
                 <td>
@@ -36,6 +37,12 @@
                 <td>
                     <!-- desc goes here -->
                      <%= item.desc %>
+                </td>
+                    
+                <td>
+                    <% if(item.coupon) { %>
+                        <p class="couponIcon">&#9984;</p>
+                <% } %>
                 </td>
             </tr>
         </tbody>

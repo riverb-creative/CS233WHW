@@ -5,8 +5,8 @@
           
         <select name="itemOptions" id="itemOptions">
           <!-- forEach loop starts here -->
-          <% listItems.forEach((item) => { %>
-            <option id="item">
+          <% item.forEach((item) => { %>
+            <option value="<%= item._id %>" class="item">
                 <!-- itemName goes here -->
                  <%= item.itemName %>
             </option>

@@ -10,16 +10,17 @@
 
 const express = require('express');
 const router = express.Router();
-const listItems = require('../data/data');
+//const listItems = require('../data/data');
+const Item = require('../models/Item');
 const { body, validationResult } = require('express-validator');
 
 router.post("/", 
 [
     body("itemName").notEmpty().withMessage("The item name is required"), 
     body("itemSection").notEmpty().isIn(["canine", "feline", "rodent"]).withMessage("The item section is required"),
-    body("itemDesc").isAlpha().withMessage("Description must only contain letters!")
+    body("itemDesc").notEmpty().withMessage("Description must only contain letters!")
 ],
-(req, res) => {
+async (req, res) => {
     //results of the validation
     const theResult = validationResult(req);
     const theError = theResult.array();
@@ -36,20 +37,26 @@ router.post("/",
         let theDesc = req.body.itemDesc;
         let theCoupon = req.body.itemCoupon;
 
-        itemID = listItems.length + 1;
+        //itemID = listItems.length + 1;
 
 
 
         let theNewItem = {
-            id: itemID,
             itemName: theItemName,
             section: theSection,
             desc: theDesc,
             coupon: theCoupon
         }
-        listItems.push(theNewItem);
+        //listItems.push(theNewItem);
+        try {
+            await Item.create(theNewItem);
+            res.redirect("/shoppingList");
+        }
+        catch (error) {
+            res.status(500).send("Item not added: " + error);
+        }
 
-        res.redirect("/shoppingList");
+       
     }
     else {
         res.status(400).render("errors", { title: "Fix Your Errors!", appName: "Try Again", errors: theError, urlPath: theURL})
@@ -61,7 +68,7 @@ router.post("/",
 
     router.get('/', (req, res) => {
         // res.json(listItems);
-         res.render("addItem", { title: "Add Item Form", appName: "Add Item to Shopping List", listItems });
+         res.render("addItem", { title: "Add Item Form", appName: "Add Item to Shopping List", Item });
     });
     
 
