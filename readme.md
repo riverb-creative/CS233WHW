@@ -1,6 +1,6 @@
 # CS 233W - Homework 06
 ## Author: River
-### Date: 11/24/2025
+### Date: 12/10/2025
 
 **Description:** CS 233W Homework 06 - Transferring data to mongoDB atlas for data storage
 
@@ -96,5 +96,5 @@ How To Install Dependencies:
    > - Add list item: _http://localhost:300/api/list_
    > > - You will need to go into Thunder Client and write JSON Content under the body tab like: {itemName: 'Cat socks', section: 'canine', desc: 'Cute cat socks for your cat to wear!', coupon: false}
    > - Update list item: _http://localhost:300/api/list/TheIdYouWantToUpdate_
-      > > - You will need to go into Thunder Client and write JSON Content under the body tab like: {itemName: 'Cat socks', section: 'canine', desc: 'Cute cat socks for your cat to wear!', coupon: false} _but only update the parts you want!_
+   > > - You will need to go into Thunder Client and write JSON Content under the body tab like: {itemName: 'Cat socks', section: 'canine', desc: 'Cute cat socks for your cat to wear!', coupon: false} _but only update the parts you want!_
    > - Delete list item: _http://localhost:300/api/list/TheIdYouWantToDelete_
