@@ -49,7 +49,7 @@ How To Install Dependencies:
 > The fields that have specific validation requirements:
    > 1. Item Name is required
    > 2. One of the categories must be selected
-   > 3. Description must only contain letters
+   > 3. Description is required
 
 > [!IMPORTANT]
 > example of adding an item that will work:
