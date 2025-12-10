@@ -87,4 +87,14 @@ How To Install Dependencies:
       >   {type: Boolean,
       >      default: false
       >   }
-    
+
+> [!IMPORTANT]
+> how to access RESTful APIs in Thunder Client or related application:
+   > - Return all list items: _http://localhost:300/api/list_
+   > > - you can also add _section_ to search for specific sections (canine, feline, or rodent) ex: _http://localhost:300/api/list?section='canine'_
+   > - Return single list item: _http://localhost:300/api/list/TheIdYouWantToSearch_
+   > - Add list item: _http://localhost:300/api/list_
+   > > - You will need to go into Thunder Client and write JSON Content under the body tab like: {itemName: 'Cat socks', section: 'canine', desc: 'Cute cat socks for your cat to wear!', coupon: false}
+   > - Update list item: _http://localhost:300/api/list/TheIdYouWantToUpdate_
+      > > - You will need to go into Thunder Client and write JSON Content under the body tab like: {itemName: 'Cat socks', section: 'canine', desc: 'Cute cat socks for your cat to wear!', coupon: false} _but only update the parts you want!_
+   > - Delete list item: _http://localhost:300/api/list/TheIdYouWantToDelete_
